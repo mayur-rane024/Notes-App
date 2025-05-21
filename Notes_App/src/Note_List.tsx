@@ -1,4 +1,4 @@
-import { Col, Row, Stack, Button, Form , Card} from "react-bootstrap";
+import { Col, Row, Stack, Button, Form, Card, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ReactSelect from "react-select";
 import type { Note, Tag } from "./App";
@@ -100,7 +100,22 @@ function NoteCard({ id, title, tags }: SimplifiedNote) {
       to={`/${id}`}
       className={`h-100 text-reset text-decoration-none ${styles.card}`}
     >
-      <Card.Body></Card.Body>
+      <Card.Body>
+        <Stack
+          gap={2}
+          className="align-items-center justify-content-center h-100"
+        >
+          <span className = "fs-5">{title}</span>
+          {tags.length > 0 && (
+            <Stack gap={1} direction = "horizontal" className="justify-content-center flex-wrap">
+              {tags.map(tag => (
+                <Badge className="text-truncate" key = {tag.id}>{tag.label}</Badge>
+              ))}
+            </Stack>
+          )}
+ 
+        </Stack>
+      </Card.Body>
     </Card>
   );
 }
