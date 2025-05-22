@@ -2,10 +2,6 @@
 
 A simple and efficient web-based Notes App that allows users to create, edit, and manage their personal notes in a clean interface.
 
-## 🔗 Live Demo
-
-*(Add your deployed link here, e.g., Vercel, Netlify, etc.)*
-
 ---
 
 ## 🚀 Getting Started
